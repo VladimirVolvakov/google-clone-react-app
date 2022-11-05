@@ -35,3 +35,19 @@
   color: rgb(95, 99, 104);
   margin-right: 20px;
 }
+
+.MuiAvatar-root {
+  cursor: pointer;
+}
+
+.home__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 10%;
+}
+
+.home__body img {
+  height: 92px;
+  object-fit: contain;
+}
