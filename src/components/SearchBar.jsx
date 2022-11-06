@@ -8,7 +8,7 @@ import { Button } from "@material-ui/core";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SearchBar = () => {
+const SearchBar = ({ hideButtons = false }) => {
   const [googleSearchQuery, setGoogleSearchQuery] = useState("");
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const SearchBar = () => {
         />
         <MicIcon className="searchbar__inputIcon" />
       </div>
-      <div className="searchbar__buttons">
+      <div className={ !hideButtons ? "searchbar__buttons" : "searchbar__buttons hidden" }>
         <Button type="submit" onClick={searchQuery}>Google Search</Button>
         <Button>I'm Feeling Lucky</Button>
       </div>
