@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+// Component:
 import App from './App';
+// Styles:
+import './index.css';
 // Data layer:
-import StateProvider from './StateProvider';
+import { StateProvider } from './StateProvider';
 import reducer,{ initialState } from './reducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
