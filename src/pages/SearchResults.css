@@ -1,1 +1,23 @@
-.searchPage {}
+.searchResults__header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  background-color: white;
+  align-items: flex-start;
+  padding: 30px;
+  border-bottom: 1px solid lightgray;
+  z-index: 100;
+}
+
+.searchResults__logo {
+  height: 50px;
+  object-fit: contain;
+  margin-right: 50px;
+}
+
+.searchResults__searchBar > .searchbar > .searchbar__input {
+  margin-top: 0;
+  width: unset;
+  max-width: unset;
+  margin: unset;
+}
