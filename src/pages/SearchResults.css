@@ -21,3 +21,35 @@
   max-width: unset;
   margin: unset;
 }
+
+.searchResults__options {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+
+.searchResults__options--leftPart,
+.searchResults__options--rightPart {
+  display: flex;
+}
+
+.searchResults__options--leftPart a,
+.searchResults__options--rightPart a {
+  color: gray;
+  text-decoration: none;
+}
+
+.searchResults__options--rightPart {
+  margin-left: 80px;
+}
+
+.searchResults__option {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.searchResults__option a {
+  margin-left: 5px;
+}
