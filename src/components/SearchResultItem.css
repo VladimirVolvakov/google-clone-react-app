@@ -1,0 +1,19 @@
+.searchResults__result {
+  margin: 40px 0;
+}
+
+.searchResults__resultTitle {
+  text-decoration: none;
+}
+
+.searchResults__resultTitle:hover {
+  text-decoration: underline;
+}
+
+.searchResults__resultTitle > h2 {
+  font-weight: 500;
+}
+
+.searchResults__resultSnippet {
+  margin-top: 10px;
+}
