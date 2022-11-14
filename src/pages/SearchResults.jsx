@@ -3,8 +3,9 @@ import "./SearchResults.css";
 // Hooks:
 import { useStateValue } from "../StateProvider";
 import useGoogleSearch from "../useGoogleSearch";
-// Component:
+// Components:
 import SearchBar from "../components/SearchBar";
+import SearchResultItem from "../components/SearchResultItem";
 // Icons:
 import DescriptionIcon from "@material-ui/icons/Description";
 import ImageIcon from "@material-ui/icons/Image";
@@ -77,21 +78,19 @@ const SearchResults = () => {
           </div>
         </div>
       </div>
-      { term && (
+      {term && (
         <div className="searchResults__results">
           <p className="searchResults__resultCounter">
-            About {responseObject?.searchInformation.formattedTotalResults} results ({responseObject?.searchInformation.formattedSearchTime} seconds) for {term}
+            About {responseObject?.searchInformation.formattedTotalResults}{" "}
+            results ({responseObject?.searchInformation.formattedSearchTime}{" "}
+            seconds) for {term}
           </p>
 
-          { responseObject?.items.map(item => (
-            <div className="searchResults__result">
-              <a href={item.link}>{item.displayLink}</a>
-              <a href={item.link} className="searchResults__resultTitle"><h2>{item.title}</h2></a>
-              <p className="searchResults__resultSnippet">{item.snippet}</p>
-            </div>
-          )) }
+          {responseObject?.items.map(item => (
+            <SearchResultItem itemInfo={item} />
+          ))}
         </div>
-      ) }
+      )}
     </div>
   );
 };
