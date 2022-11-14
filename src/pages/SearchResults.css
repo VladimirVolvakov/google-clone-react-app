@@ -53,3 +53,13 @@
 .searchResults__option a {
   margin-left: 5px;
 }
+
+.searchResults__results {
+  max-width: 650px;
+  margin: 20px 0 100px 240px;
+}
+
+.searchResults__resultCounter {
+  color: #70757a;
+  font-size: 14px;
+}
