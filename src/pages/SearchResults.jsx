@@ -20,12 +20,11 @@ import { Link } from "react-router-dom";
 
 const SearchResults = () => {
   const [{ term }, dispatch] = useStateValue();
-  // const { data } = useGoogleSearch(term);
+  // Live API call:
+  const { data } = useGoogleSearch(term);
 
-  // console.log(data)
-
-  const data = responseObject;
-  console.log(data);
+  // Mock API call:
+  // const data = responseObject;
 
   return (
     <div className="searchResults">
@@ -81,12 +80,12 @@ const SearchResults = () => {
       {term && (
         <div className="searchResults__results">
           <p className="searchResults__resultCounter">
-            About {responseObject?.searchInformation.formattedTotalResults}{" "}
-            results ({responseObject?.searchInformation.formattedSearchTime}{" "}
+            About {data?.searchInformation.formattedTotalResults}{" "}
+            results ({data?.searchInformation.formattedSearchTime}{" "}
             seconds) for {term}
           </p>
 
-          {responseObject?.items.map(item => (
+          {data?.items.map(item => (
             <SearchResultItem itemInfo={item} />
           ))}
         </div>

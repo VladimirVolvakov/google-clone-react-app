@@ -17,3 +17,10 @@
 .searchResults__resultSnippet {
   margin-top: 10px;
 }
+
+.searchResults__resultImage {
+  object-fit: contain;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
